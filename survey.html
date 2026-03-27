@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Survey</title>
+</head>
+<body>
+
+<h1>Опитування студентів</h1>
+<p>Будь ласка, заповніть форму нижче</p>
+
+<form action="#" method="post">
+
+    <fieldset>
+        <legend>Особиста інформація</legend>
+
+        <label>Ім'я:
+            <input type="text" name="name" required placeholder="Введіть ім'я">
+        </label>
+        <br><br>
+
+        <label>Email:
+            <input type="email" name="email" required placeholder="example@mail.com">
+        </label>
+        <br><br>
+
+        <label>Вік:
+            <input type="number" name="age" min="16" max="100" required>
+        </label>
+        <br><br>
+
+        <label>Дата народження:
+            <input type="date" name="birthdate">
+        </label>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Освіта</legend>
+
+        <label>Курс:
+            <select name="course" required>
+                <option value="">Оберіть курс</option>
+                <option>1 курс</option>
+                <option>2 курс</option>
+                <option>3 курс</option>
+                <option>4 курс</option>
+                <option>Магістратура</option>
+            </select>
+        </label>
+
+        <br><br>
+
+        <label>Форма навчання:</label><br>
+        <label><input type="radio" name="study_type" value="fulltime" required> Денна</label><br>
+        <label><input type="radio" name="study_type" value="parttime"> Заочна</label>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Навички та інтереси</legend>
+
+        <label>Які мови програмування ви знаєте?</label><br>
+
+        <label><input type="checkbox" name="lang" value="c++"> C++</label><br>
+        <label><input type="checkbox" name="lang" value="java"> Java</label><br>
+        <label><input type="checkbox" name="lang" value="python"> Python</label><br>
+        <label><input type="checkbox" name="lang" value="js"> JavaScript</label><br>
+
+        <br>
+
+        <label>Рівень володіння програмуванням:</label><br>
+        <input type="range" name="level" min="1" max="10">
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Додаткова інформація</legend>
+
+        <label>Улюблений колір:
+            <input type="color" name="color">
+        </label>
+
+        <br><br>
+
+        <label>Скільки годин на день ви навчаєтесь?
+          <input type="number" name="study_hours" min="1" max="24" placeholder="1-24" required>
+        </label>
+
+        <br><br>
+
+        <label>Завантажте резюме:
+            <input type="file" name="file">
+        </label>
+
+        <br><br>
+
+        <label>Ваш сайт/портфоліо:
+            <input type="url" name="website" placeholder="https://...">
+        </label>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Відгук</legend>
+
+        <label>Оцініть курс:</label><br>
+        <select name="rating">
+            <option>Відмінно</option>
+            <option>Добре</option>
+            <option>Задовільно</option>
+            <option>Погано</option>
+        </select>
+
+        <br><br>
+
+        <label>Ваші коментарі:</label><br>
+        <textarea name="comments" rows="5" cols="50" placeholder="Напишіть тут..."></textarea>
+
+    </fieldset>
+
+    <br>
+
+    <label>
+        <input type="checkbox" required>
+        Я погоджуюсь на обробку даних
+    </label>
+
+    <br><br>
+
+    <input type="submit" value="Надіслати">
+    <input type="reset" value="Очистити">
+
+</form>
+
+</body>
+
+<script>
+document.querySelector("form").onsubmit = function() {
+    alert("Дякуємо, вашу відповідь враховано!");
+    this.reset();
+    return false;
+};
+</script>
+</html>
